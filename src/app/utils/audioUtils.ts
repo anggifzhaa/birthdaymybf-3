@@ -1,26 +1,42 @@
-import hbdSound from './hbd.mp3';
+import hbdSound from './elvis-presleyy.mp3';
 
 let currentAudio: HTMLAudioElement | null = null;
+let stopTimer: ReturnType<typeof setTimeout> | null = null;
+
+const clearStopTimer = () => {
+  if (stopTimer) {
+    clearTimeout(stopTimer);
+    stopTimer = null;
+  }
+};
 
 export const playHBD = () => {
-  // Stop any existing audio
+  clearStopTimer();
+
   if (currentAudio) {
     currentAudio.pause();
     currentAudio.currentTime = 0;
   }
 
-  // Create new audio instance
   currentAudio = new Audio(hbdSound);
   currentAudio.volume = 0.5;
-  currentAudio.loop = true; // This makes it repeat infinitely
-  
+  currentAudio.loop = true;
+
   currentAudio.play().catch(e => console.error('Audio play failed:', e));
+
+  // Durasi 26 detik (26000 ms)
+  stopTimer = setTimeout(() => {
+    stopHBD();
+  }, 34000);
 };
 
 export const stopHBD = () => {
+  clearStopTimer();
+
   if (currentAudio) {
     currentAudio.pause();
     currentAudio.currentTime = 0;
     currentAudio = null;
   }
 };
+

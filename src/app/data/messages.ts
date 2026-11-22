@@ -25,12 +25,12 @@ export const SUCCESS_MESSAGES = {
 export const WISH_MESSAGES = [
   "One year older, ten times hotter.. ",
   "May all your delulu come trululu.. ",
-  "Have a purrfect ♪(^∇^*) birthday.. ",
+  "Have a perfect ♪(^∇^*) birthday.. ",
   "A million extra wishes to you!.. ",
   "You are a limited edition with unlimited potential.. ",
   "You are flippin' awesome.. ",
   "Wishing you a rizzful year ahead.. ",
-  "Roses are red, skies are blue.. I just wanna say Happy Birthday to you <3...",
+  "Roses are red, skies are blue.. I just wanna say Happy Birthday to you Bebe <3...",
   "Hope your birthday lights up with dreams and stars...",
 ];
 // Deprecated: do not export a component from data file. Keep data exports only.
